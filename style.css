@@ -380,16 +380,27 @@ h4 {
 .icon-quote {
     font-size: 5em; /*75px;*/ 
     font-family: Georgia, 'Times New Roman', Times, serif; 
-    text-align: center;  
     line-height: 0;
     color: #fff;
     font-style: italic;
 }
+.icon-quote-right {
+    text-align: right;
+}
+
 /*carusel*/
 
 .item {
     background: #74644d;
+    padding: 30px;
 }
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background: #4e4b25;
+}
+.owl-theme .owl-dots .owl-dot span {
+    background: #dfffcd;
+} 
 
 
 /*read*/
@@ -615,8 +626,6 @@ color: #806363;
 .main_menu.menu_state_open .menu__links {
     display: block;
 }
-
-
 
 
 /*media*/
