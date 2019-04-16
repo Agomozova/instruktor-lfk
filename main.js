@@ -17,7 +17,7 @@
   
 
 
-  /*about button*/
+/*about button*/
 window.onload = function () {
   document.getElementById("toggler").onclick = function() {
     openbox("box", this);
@@ -40,7 +40,6 @@ function openbox(id, toggler) {
 /*carusel*/
 
 $(function() {
-  // Owl Carousel
   var owl = $(".owl-carousel");
   owl.owlCarousel({
     items: 1,
