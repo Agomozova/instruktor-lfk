@@ -1,3 +1,4 @@
+  /*gamb*/
   (function($){
     $(function() {
       $('.menu__icon').on('click', function() {
@@ -14,4 +15,41 @@
     });
   })(jQuery);
   
+
+
+  /*about button*/
+window.onload = function () {
+  document.getElementById("toggler").onclick = function() {
+    openbox("box", this);
+    return false;
+  };
+};
+function openbox(id, toggler) {
+  let div = document.getElementById(id);
   
+  if (div.style.display == "block") {
+    div.style.display = "none";
+    toggler.innerHTML = "подробнее обо мне";
+  }
+  else {
+    div.style.display = "block";
+    toggler.innerHTML = "Закрыть";
+  }
+}
+
+/*carusel*/
+
+$(function() {
+  // Owl Carousel
+  var owl = $(".owl-carousel");
+  owl.owlCarousel({
+    items: 1,
+    loop: true,
+    nav: true,
+    autoplay: true,
+    autoplayTimeout: 3500,
+    smartSpeed: 1000,
+    animateOut: "fadeOutLeft",
+    animateIn: "ffadeInRight",
+  });
+});

@@ -10,8 +10,15 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Sintony:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/animate.css">
+    <!--carusel-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!--my style-->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <!--script carusel-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
     <script src="main.js"></script>
 </head>
 
@@ -144,17 +151,33 @@
                         <p class="personal__work">
                             с 2012 года работаю в реабилитационном центре в г.Москве.
                         </p>
-                        <div class="personal__btn">
-                            <a href="#">
-                                подробнее обо мне
-                            </a>
-                        </div>
                     </div>
                 </div>
                 <div class="personal_foto col-lg-4 col-md-3 col-12">
                     <img src="img/personal-foto.png" alt="foto by Vladimir Suarishvili" class="personal_foto__img">
                 </div>
-                
+                <div id="box" class="additional">
+                    <div class="additional__experience">
+                        c 2015 по 2017г. - Инструктор ЛФК в ЦСКА
+                    </div>
+                    <div class="additional__education">
+                        <p>2004г.- 2008г. - Академия Физического Воспитания и Спорта Грузии. Специализация- тренер по легкой атлетике </p>
+                        <p>2008г.-2012г. - Российский Государственный Университет Физической Культуры Спорта и Туризма. Кафедра ЛФК, реабилитации и массажа</p>
+                        <div class="diplom1">
+                            <img src="" alt="">
+                        </div>
+                        <div class="diplom">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper_personal__btn col-12 d-flex justify-content-end">
+                    <div class="personal__btn">
+                        <a id="toggler" href="#">
+                            подробнее обо мне
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -194,43 +217,43 @@
                         <span>И состоит из: </span>
                         разработки индивидуального курса ЛФК с подбором эффективных упражнений а также оптимальной интенсивности физической нагрузки, проведения занятий лечебной физкультурой под наблюдением опытного и квалифицированного инструктора, корректировка упражнений в зависимости от достигнутых результатов, консультации по самостоятельным занятиям.
                     </p>
-                    <div class="personal_offer">
-                        <h3 class="personal_offer__title">
+                    <div class="individual_offer">
+                        <h3 class="individual_offer__title">
                              ПРЕДЛАГАЮ <br> ЛФК НА ДОМУ:
                         </h3>
-                        <div class="personal_offer__one">
-                            <div class="personal_offer__icon_circle"></div>
-                            <div class="personal_offer__desc">
+                        <div class="individual_offer__one">
+                            <div class="individual_offer__icon_circle"></div>
+                            <div class="individual_offer__desc">
                                  после инсульта
                             </div>
                         </div>
-                        <div class="personal_offer__two">
-                            <div class="personal_offer__icon_circle"></div>
-                            <div class="personal_offer__desc">
+                        <div class="individual_offer__two">
+                            <div class="individual_offer__icon_circle"></div>
+                            <div class="individual_offer__desc">
                                 при травмотологии
                             </div>
                         </div>
-                        <div class="personal_offer__three">
-                            <div class="personal_offer__icon_circle"></div>
-                            <div class="personal_offer__desc">
+                        <div class="individual_offer__three">
+                            <div class="individual_offer__icon_circle"></div>
+                            <div class="individual_offer__desc">
                                 при ишимических заболеваниях 
                             </div>
                         </div>
-                        <div class="personal_offer__four">
-                            <div class="personal_offer__icon_circle"></div>
-                            <div class="personal_offer__desc">
+                        <div class="individual_offer__four">
+                            <div class="individual_offer__icon_circle"></div>
+                            <div class="individual_offer__desc">
                                 дцп
                             </div>
                         </div>
-                        <div class="personal_offer__five">
-                            <div class="personal_offer__icon_circle"></div>
-                            <div class="personal_offer__desc">
+                        <div class="individual_offer__five">
+                            <div class="individual_offer__icon_circle"></div>
+                            <div class="individual_offer__desc">
                                 при черепно-мозговых травмах
                             </div>
                         </div>
-                        <div class="personal_offer__six">
-                            <div class="personal_offer__icon_circle"></div>
-                            <div class="personal_offer__desc">
+                        <div class="individual_offer__six">
+                            <div class="individual_offer__icon_circle"></div>
+                            <div class="individual_offer__desc">
                                 травмах позвоночника (ТБСМ)
                             </div>
                         </div>
@@ -313,15 +336,30 @@
             </div>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="icon-quote col-lg-1 col-md-2 col-sm-1 col-1">
-                    &#8220
-                </div>
-                <div class="review_desc col-lg-10 col-md-8 col-sm-10 col-10 fadeInDown">
-                    Я, Мария Васильевна,  78лет, три года назад случился инсульт, на моем пути встретился Владимир, благодаря которому я не только двигаюсь, но и каждый раз заряжает меня юмором 
-                </div>
-                <div class="icon-quote icon-quote-right col-lg-1 col-md-2 col-sm-1 col-1 align-self-end">
-                    &#8221
+            <div class="row home-demo">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="icon-quote col-lg-1 col-md-2 col-sm-1 col-1">
+                            &#8220
+                        </div>
+                        <div class="review_desc col-lg-10 col-md-8 col-sm-10 col-10">
+                            Я, Мария Васильевна,  78лет, три года назад случился инсульт, на моем пути встретился Владимир, благодаря которому я не только двигаюсь, но и каждый раз заряжает меня юмором 
+                        </div>
+                        <div class="icon-quote icon-quote-right col-lg-1 col-md-2 col-sm-1 col-1 align-self-end">
+                            &#8221
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon-quote col-lg-1 col-md-2 col-sm-1 col-1">
+                            &#8220
+                        </div>
+                        <div class="review_desc col-lg-10 col-md-8 col-sm-10 col-10">
+                            Добрый день! Владимир отличный специалист, внимательный и отвественный! Я, Конюшенко Наталья Ивановна, мама Николая, которому сейчас 28 лет, с детства диагноз ДЦП 
+                        </div>
+                        <div class="icon-quote icon-quote-right col-lg-1 col-md-2 col-sm-1 col-1 align-self-end">
+                            &#8221
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -340,35 +378,34 @@
             <div class="row">
                 <div class="article col-lg-6">
                     <div class="icon_left"></div>
-                    <div class="article__desc">
-                        <h3>
+                    <div class="article__wrapper">
+                        <h3 class="article__wrapper_title">
                             ЛФК - лечение или профилактика?
                         </h3>
-                        <div class="artile__desc_about">
+                        <div class="artile__wrapper_desc">
                             <p>
                                 В наших головах есть сложившийся стереотип об ЛФК. Постараемся разобраться что же это за штука такая.
                             </p>
                         </div>
                         
-                        <div class="more">
+                        <div class="more_btn">
                             подробнее
                         </div>
                     </div>
-                    
                 </div>
                 <div class="article col-lg-6">
                     <div class="icon_left"></div>
-                    <div class="article__desc">
-                        <h3>
+                    <div class="article__wrapper">
+                        <h3 class="article__wrapper_title">
                             Методы и методики ЛФК
                         </h3>
-                        <div class="artile__desc_about">
+                        <div class="artile__wrapper_desc">
                             <p>
                                 Это важная тема на сегодняшний день. Итак весь день непррывно занматься териноваками и тогда и только тогда у вас все получиться. Зтрагивает не только а еще и так далее и тому подобная и формация по этой темею И как показывает эта информациz я необходимо снова и снова разговаривать
                             </p>
                         </div>
                         
-                        <div class="more">
+                        <div class="more_btn">
                             подробнее
                         </div>
                     </div>
@@ -379,33 +416,33 @@
             <div class="row">
                 <div class="article col-lg-6">
                     <div class="icon_left"></div>
-                    <div class="article__desc">
-                        <h3>
+                    <div class="article__wrapper">
+                        <h3 class="article__wrapper_title">
                            ЛФК после инсульта
                         </h3>
-                        <div class="artile__desc_about">
+                        <div class="artile__wrapper_desc">
                             <p>
                                 Вы уже точно все знаете про инсульт, но вопрос как вернуть утраченные позиции по-прежнему есть и это ЛФК.
                             </p>
                         </div>
                         
-                        <div class="more">
+                        <div class="more_btn">
                             подробнее
                         </div>
                     </div>
                 </div>
                 <div class="article col-lg-6">
                     <div class="icon_left"></div>
-                    <div class="article__desc">
-                        <h3>
+                    <div class="article__wrapper">
+                        <h3 class="article__wrapper_title">
                             ЛФК при гинекологических заболеваниях
                         </h3>
-                        <div class="artile__desc_about">
+                        <div class="artile__wrapper_desc">
                             <p>
                                 Основная цель занятий лечебной физической культуры (ЛФК) с гинекологическими больными - способствовать более благоприятному течению патологического процесса, предупреждению возможных осложнений, опухолей и ликвидации остаточных явлений.
                             </p>
                         </div>
-                        <div class="more">
+                        <div class="more_btn">
                             подробнее
                         </div>
                     </div>
@@ -415,7 +452,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="read_more btn_general">
+                    <div class="read_more">
                         <a href="#">
                             все статьи
                         </a> 
