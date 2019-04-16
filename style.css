@@ -226,6 +226,7 @@ h3 {
 h4 {
     font-size: 1.133em; /*17px;*/
 }
+
 .about_lfk .container {
     box-shadow: 1px 0 20px 4px #fdf0e3;
     position: relative;
@@ -251,14 +252,14 @@ h4 {
 .about_lfk__desc_text span{
     color: #dd9165;
     font-weight: 600;
-   
-    
 }
+
 .about_lfk__desc_text__impotant {
     color: #ff5e49;
     text-align: right;
     font-style: italic;
 }
+
 .about_lfk__desc_text {
     text-align: justify;
     font-size: 1em; /*15px;*/
@@ -317,25 +318,21 @@ h4 {
 }
 .services_price__kurse:hover {
     margin-top: 2px;
-    
 }
 
 .services_price__kurse_title {
     background: #f59963c7;
     border-radius: 5px 5px 0 0;
     padding: 23px 0;
-   
 }
 .services_price__kurse_days {
     background: #e9a67a;
     padding: 4px 0;
-    
 }
 .services_price__kurse_amount {
     background: #f3e09d;
     padding: 4px 0;
 }
-
 
 .services_price__recording {
     width: 20%;
@@ -389,9 +386,9 @@ h4 {
     font-style: italic;
 }
 /*carusel*/
+
 .item {
     background: #74644d;
-    
 }
 
 
@@ -438,7 +435,6 @@ h4 {
     display: block;
     background: #e2b578;
     background: linear-gradient( to right, #ff6038c7, #ff9a72, #f3e09d);
-    
 }
 .artile__wrapper_desc {
     height: 2.7em;
@@ -506,7 +502,6 @@ h4 {
     -webkit-transform: scale(1.4);
     -ms-transform: scale(1.4);
     transform: scale(1.4);
-    
 }
 .contacts__about i {
     color: #fff;
@@ -635,7 +630,6 @@ color: #806363;
     .about {
         padding: 60px 50px;
     }
-  
 }
 
 @media screen and (min-width: 576px) and (max-width:767px){
@@ -655,7 +649,6 @@ color: #806363;
     .menu__icon{
         display: inline-block;
     }
-      
     .menu__links {
         position: fixed;
         display: none;
@@ -674,12 +667,10 @@ color: #806363;
         border: 0.5px solid rgb(255, 220, 174);
         border-radius: 3px;
         margin: 2px 0;
-                
     }
     .maybe {
         flex-direction: column;
         justify-content: flex-end;
-        
     }
     li.menu__item:hover {
         background-color: #f5a91d;
@@ -699,11 +690,9 @@ color: #806363;
     .btn_general {
        padding: 5px;
     }
-
     .menu__icon{
         display: inline-block;
     }
-      
     .menu__links {
         position: fixed;
         display: none;
@@ -722,12 +711,10 @@ color: #806363;
         border: 0.5px solid rgb(255, 220, 174);
         border-radius: 3px;
         margin: 1px 0;
-                
     }
     .maybe {
         flex-direction: column;
         justify-content: flex-end;
-        
     }
     li.menu__item:hover {
         background-color: #f5a91d;
@@ -828,6 +815,7 @@ color: #806363;
         padding: 40px 10px;
     }
 }
+
 @media screen and (min-width: 320px) and (max-width: 345px) {
     .offer .btn_general {
         display: none;
@@ -848,6 +836,7 @@ color: #806363;
         width: 43%;
     }
 }
+
 @media screen and (min-width: 320px) and (max-width: 390px) {
     .contacts__about {
         height: 10vh;
