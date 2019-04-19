@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <!--my style-->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <!--bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!--script carusel-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -94,10 +98,44 @@
                         <div class="number_telephone">
                             <a href="tel:+79636219919">8-963-621-99-19</a>
                         </div>
-                        <div class="btn_general">
-                            <a href="#">
-                                Записаться
-                            </a>
+                        <div>
+                            <button type="button" class="btn_general" data-toggle="modal" data-target="#exampleModal">Записаться</button>
+                        </div>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Пригласить инструктора ЛФК</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Ваше имя:</label>
+                                        <input type="text" class="form-control" id="recipient-name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Ваш телефон:</label>
+                                        <input type="text" class="form-control" id="recipient-name">
+                                    </div>
+                                    <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label">Ваш email:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                        </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Ваше сообщение:</label>
+                                        <textarea class="form-control" id="message-text" placeholder="Хочу пригласить инструктора ЛФК 01 мая в 15.00"></textarea>
+                                    </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary btn_close" data-dismiss="modal">Закрыть</button>
+                                    <button type="button" class="btn btn-primary btn_go">Отправить</button>
+                                </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -179,7 +217,7 @@
                                         <img src="img/diplom4_mini.png" alt="">
                                     </div>
                                     <div class="diplom5">
-                                        <img src="img/diplom5_mini.png" alt="">
+                                        <img src="img/diplom5.jpeg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -537,29 +575,29 @@
             </div>
         </div>
         <div class="container">
-            <form>
+            <form action="send.php" method="POST">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="form-group form_enter">
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ваше имя" required>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" name="user_name" placeholder="Ваше имя" required>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group form_enter">
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" name="user_email" placeholder="name@example.com" required>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="form-group form_enter">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Текст сообщения" required></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message" placeholder="Текст сообщения" required></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12  btn_place">
-                        <button type="button" class="btn btn-outline-secondary">Отправить</button>
+                        <button type="submit" class="btn btn-outline-secondary">Отправить</button>
                     </div>
                 </div>
             </form>

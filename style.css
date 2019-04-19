@@ -117,16 +117,16 @@ h3 {
     padding: 8px 1px;
     box-shadow: 1px 0 20px 4px #360303;
     text-align: center;
+    width: 100%;
     min-width: 150px;
-}
-.btn_general a {
     font-size: 1.067em; /*16px;*/
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #3a0707;
-    
+    border: none;
 }
+
 .btn_general:hover {
     box-shadow:
     1px 1px #5e3823,
@@ -139,6 +139,19 @@ h3 {
     -webkit-transform: translateX(-4px);
     transform: translateX(-4px);
     transition: all 1s;
+}
+.form-group ::placeholder {
+    font-size: 0.7em;
+    color: #bdbdbd;
+}
+
+.btn_close {
+    background: #b9b4b0;
+    font-size: 1.3em;
+}
+.btn_go {
+    background: #fd902b;
+    font-size: 1.3em;
 }
 
 .advantages {
@@ -246,12 +259,11 @@ h3 {
     width: 80px;
     margin: 5px;
     text-align: center;
-   
 }
 /*
-.diplom2, .diplom4, .diplom5  img:hover {
+.diplom5  img:hover {
     height: 250px;
-    width: 350px;   
+    width: 361px;   
 }
 */
 
@@ -711,8 +723,6 @@ color: #806363;
     }
     .header {
         background: url("img/main-b_m.jpg") no-repeat center / cover;
-        
-        
     }
     .title__desc {
         margin-left: 0;
@@ -741,7 +751,7 @@ color: #806363;
         text-align: right;
         padding: 5px;
         width: 100%;
-        background-color: rgba(250, 82, 31, 0.2);
+        background-color: rgba(250, 82, 31);
         border: 0.5px solid rgb(255, 220, 174);
         border-radius: 3px;
         margin: 2px 0;

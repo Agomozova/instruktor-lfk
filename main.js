@@ -7,8 +7,6 @@
       });
       
       $('.menu__item').on('click', function() {
-        // do something
-  
         $(this).closest('.main_menu')
           .removeClass('menu_state_open');
       });
@@ -52,3 +50,5 @@ $(function() {
     animateIn: "ffadeInRight",
   });
 });
+
+
