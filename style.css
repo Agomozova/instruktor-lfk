@@ -17,7 +17,7 @@ a:hover {
 h1, h2, h3, h4, h5 {
     font-weight: 400;
 }
-header {
+.header {
     background: url("img/main-b.jpeg") no-repeat center / cover;
     height: 100vh;
     min-height: 520px;
@@ -78,16 +78,35 @@ h3 {
     font-size: 1.6em; /*24px;*/
     margin-left: 500px;
 }
-.number_telephone a {
-    display: block;
-    color: #fff;
+.number_telephone {
     margin-top: 5px;
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 1.467em; /*22px;*/
-    text-shadow: 1px 1px 2px rgb(255, 30, 30);
+    margin-bottom: 10px;
     min-width: 150px;
+    background: rgba(37, 34, 14, 0.3);
+    border-radius: 3px;
+    display: block;
     cursor: pointer;
+    padding: 8px 1px;
+    text-align: center;
+}
+.number_telephone a {
+    color: #fff;
+    font-size: 1.2em; /*22px;*/
+    text-shadow: 1px 1px 2px rgb(255, 30, 30);
+}
+.number_telephone:hover {
+    box-shadow:
+    1px 1px #443719,
+    2px 2px #443719,
+    3px 3px #443719,
+    4px 4px #312c11,
+    5px 5px #312c11,
+    6px 6px #312c11,
+    7px 7px #312c11;
+    -webkit-transform: translateX(-4px);
+    transform: translateX(-4px);
+    transition: all 1s;
 }
 
 .btn_general {
@@ -207,8 +226,34 @@ h3 {
 .additional {
     display: none;
     font-size: 1.1em;
+    margin: 0 auto;
     margin-top: 20px;
+    width: 90%;
 }
+.additional__education {
+    padding: 20px 0;
+}
+.diplom2 img, .diplom4 img, .diplom5 img{
+    display: block;
+    height: 80px;
+    width: 60px;
+    margin: 5px;
+    background: #74644d;
+    overflow: hidden;
+}
+.diplom1, .diplom3 {
+    height: 60px;
+    width: 80px;
+    margin: 5px;
+    text-align: center;
+   
+}
+/*
+.diplom2, .diplom4, .diplom5  img:hover {
+    height: 250px;
+    width: 350px;   
+}
+*/
 
 */
 /*services*/
@@ -428,8 +473,10 @@ h4 {
 }
 
 .article {
+    display: block;
     color: #362d2d;
     font-family: 'Ubuntu', sans-serif;
+    cursor: pointer;
 }
 .icon_left {
     background: url("img/review.png") no-repeat top left;
@@ -643,6 +690,11 @@ color: #806363;
 /*media*/
 
 /*основные точки*/
+@media screen and (min-width: 992px) and (max-width:1200px){
+    body {
+        font-size: 15px;
+    }
+}
 
 @media screen and (min-width: 768px) and (max-width:991px){
     body {
@@ -656,6 +708,11 @@ color: #806363;
 @media screen and (min-width: 576px) and (max-width:767px){
     body {
         font-size: 11px;
+    }
+    .header {
+        background: url("img/main-b_m.jpg") no-repeat center / cover;
+        
+        
     }
     .title__desc {
         margin-left: 0;
@@ -702,15 +759,22 @@ color: #806363;
     .review_desc {
         padding: 5px;
     }
+   
 }
 
 @media screen and (max-width:575px){
     body {
         font-size: 10px;
     }
-    .btn_general {
-       padding: 5px;
+    .header {
+        background: url("img/main-b_s.jpg") no-repeat center / cover;
+        
     }
+    .btn_general, .number_telephone {
+       padding: 5px;
+       max-width: 180px;
+    }
+  
     .menu__icon{
         display: inline-block;
     }
@@ -728,7 +792,7 @@ color: #806363;
         text-align: right;
         padding: 5px;
         width: 100%;
-        background-color: rgba(250, 82, 31, 0.2);
+        background-color: rgba(226, 67, 19);
         border: 0.5px solid rgb(255, 220, 174);
         border-radius: 3px;
         margin: 1px 0;
@@ -767,6 +831,7 @@ color: #806363;
         width: 17vh;
         background: url("img/icon-ct-mini.png") no-repeat center / cover;
     }
+   
 }
 
 
@@ -801,7 +866,7 @@ color: #806363;
         text-align: left;
         margin-top: 150px;
     } 
-    .number_telephone a {
+    .number_telephone {
         margin-top: -40px;
     }
     .contacts__about {
@@ -822,9 +887,11 @@ color: #806363;
         float: none;
         margin: 5px auto;
     }
+    .number_telephone {
+        min-width: 134px;
+    }
     .number_telephone a {
         font-size: 1.4em;
-        min-width: 50px;
     }
     .review_desc {
         font-size: 1.3em;
@@ -839,6 +906,9 @@ color: #806363;
     }
     .review {
         padding: 40px 10px;
+    }
+    .read_more {
+        width: 28%;
     }
 }
 
@@ -872,6 +942,85 @@ color: #806363;
 
 
 
+/*articles.html*/
+
+
+.header_articles .main_header {
+    background: url("img/main-b.jpeg");
+    color:#fff;
+    padding: 10px 0;
+    
+}
+
+.menu_articles .article__wrapper_title {
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+    border: 2px dotted #f35a2c;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.menu_articles .article__wrapper_title a {
+    color: #380505;
+    font-style: normal;
+    font-size: 0.8em;
+    font-weight: 600;
+} 
+.menu_articles .article__wrapper_title:hover {
+    background: linear-gradient( to right, #ff6038c7, #ff9a72, #f3e09d);
+    border: 1px solid #e97211;
+    border-radius: 10px;
+}
+
+.main_title {
+    font-size: 1.5em;
+    padding: 5px 0;
+    margin-top: 5px;
+    text-align: center;
+}
+.main_desc {
+    padding: 8px;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+main {
+    margin: 10px 0;
+    border-radius: 10px;
+    
+    box-shadow: inset 2px 2px 1px rgba(250, 191, 136, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+}
+.line {
+    height: 1px;
+    margin: 0 50px;
+    background: rgba(247, 24, 24, 0.5);
+}
+
+
+@media screen and (min-width: 440px) and (max-width: 576px) {
+    .sidebar {
+        flex: none;
+        width: 30%;
+        margin-right: 15px
+    }
+    .main {
+        flex: none;
+        width: 65%;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 439px) {
+    .menu_articles {
+        margin: 0 auto;
+    }
+    .main {
+        margin: 10px;
+    }
+}
+
+                           
    
   
 
