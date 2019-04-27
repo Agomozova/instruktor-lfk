@@ -1,9 +1,9 @@
 /*common*/
 body {
     font-family: 'Verdana', sans-serif;
-    color: #3a0707;
+    color: rgb(58, 7, 7);
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
 }
 ul, li {
     display: block;
@@ -12,17 +12,12 @@ ul, li {
 }
 a:hover {
     text-decoration: none;
-    color: #3a0707;
+    color: rgb(58, 7, 7);
 }
 h1, h2, h3, h4, h5 {
     font-weight: 400;
 }
-.header {
-    background: url("img/main-b.jpeg") no-repeat center / cover;
-    height: 100vh;
-    min-height: 520px;
-    padding: 20px 0;
-}
+
 h1 {
     color: rgb(255, 255, 255);
     font-size: 2.8em; /*42px;*/
@@ -39,6 +34,9 @@ h2 {
 h3 {
     font-size: 1.667em; /*25px;*/
 }
+header {
+    padding-top: 20px;
+}
 
 /*logo*/
 .logo img{
@@ -46,34 +44,41 @@ h3 {
     height: 100%;
 }
 
-
+nav {
+    z-index: 2;
+}
 /*menu main*/
 
- 
-.menu__item {
+.nav-link {
     font-weight: 700;
     font-size: 1em; /*15px*/
-}
-.menu__item a {
+    cursor: pointer;
     text-transform: uppercase;
-    color: #3a0707;
+    color: rgb(58, 7, 7);
+    padding: 0;
 }
-.menu__item a:hover {
+.nav-link:hover {
     color: rgb(202, 31, 31);
 }
 .menu__links {
     display: block;
+   
 }
 
 /*offer*/
-
+.offer {
+    background: url("../img/main-b.jpeg") no-repeat center / cover;
+    height: 100vh;
+    min-height: 520px;
+    margin-top: -59px; 
+}
 
 .title {
-    margin: 23vh 0 13vh; /*170px 0*/
+    margin: 30vh 0 13vh;
     text-align: center;
 }
 .title__desc {
-    color: rgb(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
     font-style: italic;
     font-size: 1.6em; /*24px;*/
     margin-left: 500px;
@@ -91,31 +96,31 @@ h3 {
     text-align: center;
 }
 .number_telephone a {
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-size: 1.2em; /*22px;*/
     text-shadow: 1px 1px 2px rgb(255, 30, 30);
 }
 .number_telephone:hover {
     box-shadow:
-    1px 1px #443719,
-    2px 2px #443719,
-    3px 3px #443719,
-    4px 4px #312c11,
-    5px 5px #312c11,
-    6px 6px #312c11,
-    7px 7px #312c11;
+    1px 1px rgb(68, 55, 25),
+    2px 2px rgb(68, 55, 25),
+    3px 3px rgb(68, 55, 25),
+    4px 4px rgb(49, 44, 17),
+    5px 5px rgb(49, 44, 17),
+    6px 6px rgb(49, 44, 17),
+    7px 7px rgb(49, 44, 17);
     -webkit-transform: translateX(-4px);
     transform: translateX(-4px);
     transition: all 1s;
 }
 
 .btn_general {
-    background: #fd6d34;
+    background: rgb(253, 109, 52);
     border-radius: 3px;
     display: block;
     cursor: pointer;
     padding: 8px 1px;
-    box-shadow: 1px 0 20px 4px #360303;
+    box-shadow: 1px 0 20px 4px rgb(54, 3, 3);
     text-align: center;
     width: 100%;
     min-width: 150px;
@@ -123,41 +128,41 @@ h3 {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #3a0707;
+    color: rgb(58, 7, 7);
     border: none;
 }
 
 .btn_general:hover {
     box-shadow:
-    1px 1px #5e3823,
-    2px 2px #5e3823,
-    3px 3px #5e3823,
-    4px 4px #492b1b,
-    5px 5px #492b1b,
-    6px 6px #492b1b,
-    7px 7px #492b1b;
+    1px 1px rgb(94, 56, 35),
+    2px 2px rgb(94, 56, 35),
+    3px 3px rgb(94, 56, 35),
+    4px 4px rgb(73, 43, 27),
+    5px 5px rgb(73, 43, 27),
+    6px 6px rgb(73, 43, 27),
+    7px 7px rgb(73, 43, 27);
     -webkit-transform: translateX(-4px);
     transform: translateX(-4px);
     transition: all 1s;
 }
 .form-group ::placeholder {
     font-size: 0.7em;
-    color: #bdbdbd;
+    color: rgb(189, 189, 189);
 }
 
 .btn_close {
-    background: #b9b4b0;
+    background: rgb(185, 180, 176);
     font-size: 1.3em;
 }
 .btn_go {
-    background: #fd902b;
+    background: rgb(253, 144, 43);
     font-size: 1.3em;
 }
 
 .advantages {
     background: rgba(227, 182, 134, 0.11); 
-    color: #fff;
-    margin-top: 15vh; /*100px*/
+    color: rgb(255, 255, 255);
+    margin-top: 15vh;
     font-size: 1.267em;/*19px*/
     padding: 6px 0; 
     text-transform: uppercase;
@@ -165,7 +170,7 @@ h3 {
     text-align: center;
 } 
 .advantage__icon {
-    background: rgb(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.6);
     height: 25px;
     max-width: 2px;
     width: 100%;
@@ -178,18 +183,17 @@ h3 {
 /*about*/
 
 .about {
-    background: #f1caa3;
+    background: rgb(241, 202, 163);
     padding: 60px 104px;
 }
 
 .personal {
-    quotes: "\201c" "\201d";
     font-size: 1.666em;
     font-style: italic;
 }
 
 .personal:before {  
-    content: open-quote;  
+    content: "\201c";  
     font-size: 4em;
     font-family: Georgia, 'Times New Roman', Times, serif; 
     text-align: center;  
@@ -222,7 +226,7 @@ h3 {
 }
 
 .personal__btn {
-    box-shadow: 1px 0 20px 4px #e2be9c;
+    box-shadow: 1px 0 20px 4px rgb(226, 190, 156);
     width: 37%;
     max-width: 190px;
     text-align: center;
@@ -230,7 +234,7 @@ h3 {
 
 .personal__btn a {
     display: block;
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     font-style: normal;
     padding: 4px;
@@ -246,32 +250,30 @@ h3 {
 .additional__education {
     padding: 20px 0;
 }
-.diplom2 img, .diplom4 img, .diplom5 img{
-    display: block;
+.degree_2 img, .degree_4 img, .degree_5 img{
     height: 80px;
     width: 60px;
     margin: 5px;
     background: #74644d;
     overflow: hidden;
 }
-.diplom1, .diplom3 {
+.degree_1 img, .degree_3 img{
     height: 60px;
     width: 80px;
     margin: 5px;
     text-align: center;
 }
-/*
-.diplom5  img:hover {
-    height: 250px;
-    width: 361px;   
+.degrees li {
+    display: inline;
 }
-*/
 
-*/
+
+
+
 /*services*/
 
 .services {
-    background: #f9e8d6;
+    background: rgb(249, 232, 214);
     padding: 30px 0;
 }
 .arrow {
@@ -285,15 +287,16 @@ h4 {
 }
 
 .about_lfk .container {
-    box-shadow: 1px 0 20px 4px #fdf0e3;
+    box-shadow: 1px 0 20px 4px rgb(253, 240, 227);
     position: relative;
     padding: 5px 15px 10px;
 }
 
+
 .about_lfk__title {
-    background: url("img/services_title.jpeg") no-repeat top left / cover;
+    background: url("../img/services_title.jpeg") no-repeat top left / cover;
     box-shadow: 100vw 0px 0px rgba(255, 255, 255, 0.5) inset,
-    1px 0 10px 1px #d19355;
+    1px 0 10px 1px rgb(209, 147, 85);
     width: 37%;
     min-width: 320px;
     height: 100%;
@@ -303,16 +306,16 @@ h4 {
 }
 
 .about_lfk__desc p{
-    display: inline;
+    display: block;
 }
 
 .about_lfk__desc_text span{
-    color: #dd9165;
+    color: rgb(221, 145, 101);
     font-weight: 600;
 }
 
 .about_lfk__desc_text__impotant {
-    color: #ff5e49;
+    color: rgb(255, 94, 73);
     text-align: right;
     font-style: italic;
 }
@@ -330,7 +333,7 @@ h4 {
 
 
 .individual_offer {
-    background: url("img/persanal-services.jpeg") no-repeat center / cover;
+    background: url("../img/persanal-services.jpeg") no-repeat center / cover;
     width: 35%;
     min-width: 309px;
     height: 100%;
@@ -339,7 +342,7 @@ h4 {
     float: right;
     margin-right: -3.5em;
     margin-left: 15px;
-    box-shadow: 1px 0 5px 3px #360303;
+    box-shadow: 1px 0 5px 3px rgb(54, 3, 3);
 }
 
 .individual_offer__title {
@@ -347,7 +350,7 @@ h4 {
 }
 
 .individual_offer__icon_circle {
-    background: #360303;
+    background: rgb(54, 3, 3);
     display: block;
     height: 10px;
     width: 10px;
@@ -364,7 +367,7 @@ h4 {
     text-align: center;
     margin: 50px 0;
 }
-.services_price__kurse {
+.services_price__course {
     text-align: center;
     cursor: pointer;
     margin: 10px 0;
@@ -373,21 +376,21 @@ h4 {
     -o-transition: margin 0.5s ease-out;
     transition: margin 0.5s ease-out;
 }
-.services_price__kurse:hover {
+.services_price__course:hover {
     margin-top: 2px;
 }
 
-.services_price__kurse_title {
-    background: #f59963c7;
+.services_price__course_title {
+    background: rgb(245, 153, 99);
     border-radius: 5px 5px 0 0;
     padding: 23px 0;
 }
-.services_price__kurse_days {
-    background: #e9a67a;
+.services_price__course_days {
+    background: rgb(233, 166, 122);
     padding: 4px 0;
 }
-.services_price__kurse_amount {
-    background: #f3e09d;
+.services_price__course_amount {
+    background: rgb(243, 224, 157);
     padding: 4px 0;
 }
 
@@ -400,7 +403,7 @@ h4 {
 }
 
 .services_price__recording a {
-    color: #f9e8d6;
+    color: rgb(249, 232, 214);
 }
 
 .attention {
@@ -421,11 +424,11 @@ h4 {
 /*review*/
 
 .review {
-    background: #f1caa3;
+    background: rgb(241, 202, 163);
     padding: 60px 40px;
 }
 .review_desc {
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-size: 1.467em; /*22px;*/
     width: 70%;
     margin: 0 auto;
@@ -438,85 +441,64 @@ h4 {
     font-size: 5em; /*75px;*/ 
     font-family: Georgia, 'Times New Roman', Times, serif; 
     line-height: 0.7;
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-style: italic;
 }
 .icon-quote-right {
     text-align: right;
 }
+.carousel-item {
+    min-height: 330px;
+}
 
-/*carusel*/
+/*carousel*/
 
-.item {
+.carousel-item {
     background: #74644d;
     box-shadow: inset 0px 0px 15px rgba(247, 159, 119, 0.9);
     padding: 20px; 
     margin-top: 20px;
 }
-.item-reverse {
-    
-    background: rgb(236, 243, 209);
-}
-.item-reverse .icon-quote {
-    color:#74644d;
-}
-.item-reverse .review_desc {
-    color:#74644d;
-}
-
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
-    background: #4e4b25;
-}
-.owl-theme .owl-dots .owl-dot span {
-    background: #dfffcd;
-} 
 
 
 /*read*/
 
 .read {
-    background: url("img/bookcase-1869616_1920.jpg") no-repeat center / cover;
+    background: url("../img/bookcase-1869616_1920.jpg") no-repeat center / cover;
     box-shadow: 100vw 0px 0px rgba(248, 212, 157, 0.25) inset;
     padding: 60px 0;
 }
 
 .read h2 {
-    color: #fcfcfc;
+    color: rgb(252, 252, 252);
 }
 
 .article {
     display: block;
-    color: #362d2d;
+    color: rgb(54, 45, 45);
     font-family: 'Ubuntu', sans-serif;
     cursor: pointer;
 }
 .icon_left {
-    background: url("img/review.png") no-repeat top left;
+    background: url("../img/review.png") no-repeat top left;
     float: left;
     height: 50px;
     width: 50px;
 }
-.icon_right {
-    background: url("img/review.png") no-repeat top right;
-    float: right;
-    height: 50px;
-    width: 50px;
-    margin-bottom: 10px;
-}
 
 .article__wrapper {
-    background: #fff;
+    background: rgb(255, 255, 255);
     padding: 10px;
     margin: 15px 30px 0 15px;
     height: 20vh;
-    border: #816256 1px dotted;
+    border: rgb(129, 98, 86) 1px dotted;
 }
 .article__wrapper_title {
     font-size: 1.2em;/*20px;*/
     font-style: italic;
     display: block;
-    background: #e2b578;
-    background: linear-gradient( to right, #ff6038c7, #ff9a72, #f3e09d);
+    background: rgb(226, 181, 120);
+    background: linear-gradient( to right, rgb(255, 96, 56), rgb(255, 154, 114), rgb(243, 224, 157));
 }
 .artile__wrapper_desc {
     height: 2.7em;
@@ -528,7 +510,7 @@ h4 {
     font-size: 0.8em; /*12px;*/
     font-style: italic;
     margin-top: 10px;
-    color: #8d7664;
+    color: rgb(141, 118, 100);
     text-shadow: 1px 1px 1px rgb(182, 180, 180)
 }
 
@@ -552,12 +534,12 @@ h4 {
 }
 .read_more:hover {
     box-shadow:
-    1px 1px #5e3823,
-    2px 2px #5e3823,
-    3px 3px #5e3823,
-    4px 4px #3d3617,
-    5px 5px #3d3617,
-    6px 6px #3d3617;
+    1px 1px rgb(94, 56, 35),
+    2px 2px rgb(94, 56, 35),
+    3px 3px rgb(94, 56, 35),
+    4px 4px rgb(61, 54, 23),
+    5px 5px rgb(61, 54, 23),
+    6px 6px rgb(61, 54, 23);
     -webkit-transform: translateX(-4px);
     transform: translateX(-4px);
     transition: all 1s;
@@ -567,14 +549,14 @@ h4 {
 /* contacts*/
 
 .contacts {
-    background: #f1caa3;
+    background: rgb(241, 202, 163);
     padding: 60px 0 30px 0;
 }
 
 .contacts__about {
     height: 18vh;
     width: 19vh;
-    background: url("img/icon-ct.png") no-repeat center;
+    background: url("../img/icon-ct.png") no-repeat center;
     margin: 15px auto;
     cursor: pointer;
 }
@@ -586,7 +568,7 @@ h4 {
     transform: scale(1.4);
 }
 .contacts__about i {
-    color: #fff;
+    color: rgba(255, 255, 255);
     font-size: 1.467em; /*23px;*/
 }
 
@@ -606,15 +588,15 @@ form {
     margin: 0 auto;
 }
 .form_enter ::placeholder {
-color: #806363;
+color: rgb(128, 99, 99);
 }
 
 .btn_place button {
     display: block;
     margin: 0 auto;
-    color: #ffffff;
+    color: rgb(255, 255, 255);
     border: none;
-    box-shadow: 1px 0 20px 4px #e2be9c;
+    box-shadow: 1px 0 20px 4px rgb(226, 190, 156);
     text-transform: uppercase;
 }
 
@@ -622,7 +604,7 @@ color: #806363;
 /*footer*/
 
 .footer {
-    background: #6b5b3b;
+    background: rgb(107, 91, 59);
     padding: 10px 0;
 }
 
@@ -631,7 +613,7 @@ color: #806363;
 }
 
 .footer_contacts a {
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-style: italic;
 }
 .footer_contacts__item {
@@ -640,7 +622,7 @@ color: #806363;
 
 
 
-/*гамбургер*/
+/*hamburger*/
 
 .menu__icon {
     display: none;
@@ -648,13 +630,14 @@ color: #806363;
     height: 30px;
     position: relative;
     cursor: pointer;
+    z-index: 2;
 }
 .menu__icon span {
     display: block;
     position: absolute;
     height: 3px;
     width: 100%;
-    background: #88430b;
+    background: rgb(136, 67, 11);
     border-radius: 3px;
     opacity: 1;
     left: 0;
@@ -701,12 +684,8 @@ color: #806363;
 
 /*media*/
 
-/*основные точки*/
-@media screen and (min-width: 992px) and (max-width:1200px){
-    body {
-        font-size: 15px;
-    }
-}
+/*main points*/
+
 
 @media screen and (min-width: 768px) and (max-width:991px){
     body {
@@ -721,8 +700,8 @@ color: #806363;
     body {
         font-size: 11px;
     }
-    .header {
-        background: url("img/main-b_m.jpg") no-repeat center / cover;
+    .offer {
+        background: url("../img/main-b_m.jpg") no-repeat center / cover;
     }
     .title__desc {
         margin-left: 0;
@@ -737,18 +716,20 @@ color: #806363;
     .menu__icon{
         display: inline-block;
     }
+    
     .menu__links {
         position: fixed;
         display: none;
         top: 0;
         right: 0;
-        left: 70%;
-        margin-top: 45px;
+        left: 0;
+        margin-top: 50px;
         z-index: 1000;
         overflow: auto;
     }
-    .menu__item {
-        text-align: right;
+    .nav-item {
+        text-align: center;
+        letter-spacing: 2px;
         padding: 5px;
         width: 100%;
         background-color: rgba(250, 82, 31);
@@ -756,18 +737,17 @@ color: #806363;
         border-radius: 3px;
         margin: 2px 0;
     }
-    .maybe {
+    
+    .hamb {
         flex-direction: column;
         justify-content: flex-end;
     }
-    li.menu__item:hover {
-        background-color: #f5a91d;
-        box-shadow: inset 0 0 0 2px #ea5353;
-        border: 0;
-        transition-duration: 0.5s;
-    }
+ 
     .review_desc {
         padding: 5px;
+    }
+    .carousel-item {
+        min-height: 250px;
     }
    
 }
@@ -776,8 +756,8 @@ color: #806363;
     body {
         font-size: 10px;
     }
-    .header {
-        background: url("img/main-b_s.jpg") no-repeat center / cover;
+    .offer {
+        background: url("../img/main-b_s.jpg") no-repeat center / cover;
         
     }
     .btn_general, .number_telephone {
@@ -793,27 +773,30 @@ color: #806363;
         display: none;
         top: 0;
         right: 0;
-        left: 70%;
-        margin-top: 45px;
+        left: 0;
+        margin-top: 50px;
         z-index: 1000;
         overflow: auto;
     }
-    .menu__item {
-        text-align: right;
+    .nav-item {
+        text-align: center;
+        letter-spacing: 2px;
         padding: 5px;
         width: 100%;
-        background-color: rgba(226, 67, 19);
+        background-color: rgba(250, 82, 31);
         border: 0.5px solid rgb(255, 220, 174);
         border-radius: 3px;
-        margin: 1px 0;
+        margin: 2px 0;
     }
-    .maybe {
+
+       
+    .hamb {
         flex-direction: column;
         justify-content: flex-end;
     }
-    li.menu__item:hover {
-        background-color: #f5a91d;
-        box-shadow: inset 0 0 0 2px #ea5353;
+    li.nav-item:hover {
+        background-color: rgb(245, 169, 29);
+        box-shadow: inset 0 0 0 2px rgb(234, 83, 83);
         border: 0;
         transition-duration: 0.5s;
     }
@@ -831,7 +814,10 @@ color: #806363;
         display: none;
     }
     .title {
-        margin: 26vh 0 16vh;
+        margin: 30vh 0 14vh;
+    }
+    .advantages {
+        margin-top: 20vh;
     }
     .review_desc {
         padding: 20px 5px;
@@ -839,13 +825,14 @@ color: #806363;
     .contacts__about {
         height: 16vh;
         width: 17vh;
-        background: url("img/icon-ct-mini.png") no-repeat center / cover;
+        background: url("../img/icon-ct-mini.png") no-repeat center / cover;
     }
    
 }
 
 
-/*промежуточные точки*/
+/*middle points*/
+
 @media screen and (min-width: 1200px) and (max-width: 1235px) {
     .individual_offer {
         margin-right: -5px;
@@ -956,8 +943,8 @@ color: #806363;
 
 
 .header_articles .main_header {
-    background: url("img/main-b.jpeg");
-    color:#fff;
+    background: url("../img/main-b.jpeg");
+    color: rgb(255, 255, 255);
     padding: 10px 0;
     
 }
@@ -966,20 +953,20 @@ color: #806363;
     margin: 10px;
     padding: 5px;
     cursor: pointer;
-    border: 2px dotted #f35a2c;
+    border: 2px dotted rgb(243, 90, 44);
     border-radius: 10px;
-    background: #fff;
+    background: rgb(255, 255, 255);
 }
 
 .menu_articles .article__wrapper_title a {
-    color: #380505;
+    color: rgb(56, 5, 5);
     font-style: normal;
     font-size: 0.8em;
     font-weight: 600;
 } 
 .menu_articles .article__wrapper_title:hover {
-    background: linear-gradient( to right, #ff6038c7, #ff9a72, #f3e09d);
-    border: 1px solid #e97211;
+    background: linear-gradient( to right, rgb(255, 96, 56), rgb(255, 154, 114), rgb(243, 224, 157));
+    border: 1px solid rgb(233, 114, 17);
     border-radius: 10px;
 }
 

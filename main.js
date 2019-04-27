@@ -1,4 +1,4 @@
-  /*gamb*/
+  /*hamburger*/
   (function($){
     $(function() {
       $('.menu__icon').on('click', function() {
@@ -6,7 +6,7 @@
           .toggleClass('menu_state_open');
       });
       
-      $('.menu__item').on('click', function() {
+      $('.nav-link').on('click', function() {
         $(this).closest('.main_menu')
           .removeClass('menu_state_open');
       });
@@ -35,20 +35,6 @@ function openbox(id, toggler) {
   }
 }
 
-/*carusel*/
 
-$(function() {
-  var owl = $(".owl-carousel");
-  owl.owlCarousel({
-    items: 1,
-    loop: true,
-    nav: true,
-    autoplay: true,
-    autoplayTimeout: 3500,
-    smartSpeed: 1000,
-    animateOut: "fadeOutLeft",
-    animateIn: "ffadeInRight",
-  });
-});
 
 
