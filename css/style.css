@@ -1,6 +1,6 @@
 /*common*/
 body {
-    font-family: 'Verdana', sans-serif;
+    font-family: 'Sintony', sans-serif;
     color: rgb(58, 7, 7);
     font-weight: 400;
     font-size: 16px;
@@ -12,23 +12,19 @@ ul, li {
 }
 a:hover {
     text-decoration: none;
-    color: rgb(58, 7, 7);
 }
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4 {
     font-weight: 400;
 }
-
 h1 {
-    color: rgb(255, 255, 255);
     font-size: 2.8em; /*42px;*/
-    font-style: italic;
+    letter-spacing: 2px;
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
     0px 8px 13px rgba(0,0,0,0.1),
     0px 18px 23px rgba(0,0,0,0.1);
 }
 h2 {
     font-size: 1.8em; /*27px;*/
-    text-align: center;
 }
 
 h3 {
@@ -38,22 +34,74 @@ header {
     padding-top: 20px;
 }
 
+/*button*/
+.btn_general {
+    border-radius: 3px;
+    display: block;
+    padding: 8px 1px;
+    width: 100%;
+    min-width: 150px;
+    font-size: 1.067em; /*16px;*/
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: none;
+    background: none;
+}
+.btn_general:hover {
+    border: none;
+    -webkit-transform: translateX(-4px);
+    transform: translateX(-4px);
+    transition: all 1s;
+}
+/*end button*/
+
+/*form*/
+.form-group ::placeholder {
+    font-size: 1em;
+    color: rgb(204, 197, 197);
+}
+/*end form*/
+
+/*group*/
+.nav-link, .btn_general, .advantages {
+    text-transform: uppercase;
+}
+.nav-link, .btn_general, .services_price__course, .article, .contacts__about, .menu__icon {
+    cursor: pointer;
+}
+
+h1, .advantages, .btn_general, .footer_contacts a, .number_telephone a, .review_desc, 
+.icon-quote, .read_more a, .contacts__about i {
+   color: rgb(255, 255, 255);
+}
+.title, .personal, .about_lfk__desc_text__impotant, .about_lfk__title h3, .individual_offer__title, 
+.review_desc, .icon-quote, .article__wrapper_title, .more_btn, .question_desc, .footer_contacts a {
+    font-style: italic;
+}
+
+h2, .advantages, .btn_general, .title, .services_price__title, .degree_1 img, .degree_3 img, .services_price__course, 
+.services_price__recording, .review_desc, .question, .main_title {
+    text-align: center;
+}
+/*end group*/
+
+/*end common*/
+
+
 /*logo*/
 .logo img{
     width: 100%; 
     height: 100%;
 }
 
+/*menu main*/
+
 nav {
     z-index: 2;
 }
-/*menu main*/
-
 .nav-link {
     font-weight: 700;
     font-size: 1em; /*15px*/
-    cursor: pointer;
-    text-transform: uppercase;
     color: rgb(58, 7, 7);
     padding: 0;
 }
@@ -75,28 +123,20 @@ nav {
 
 .title {
     margin: 30vh 0 13vh;
-    text-align: center;
 }
 .title__desc {
     color: rgba(255, 255, 255, 0.5);
-    font-style: italic;
     font-size: 1.6em; /*24px;*/
     margin-left: 500px;
 }
+
 .number_telephone {
     margin-top: 5px;
-    text-align: center;
     margin-bottom: 10px;
     min-width: 150px;
     background: rgba(37, 34, 14, 0.3);
-    border-radius: 3px;
-    display: block;
-    cursor: pointer;
-    padding: 8px 1px;
-    text-align: center;
 }
 .number_telephone a {
-    color: rgb(255, 255, 255);
     font-size: 1.2em; /*22px;*/
     text-shadow: 1px 1px 2px rgb(255, 30, 30);
 }
@@ -109,30 +149,13 @@ nav {
     5px 5px rgb(49, 44, 17),
     6px 6px rgb(49, 44, 17),
     7px 7px rgb(49, 44, 17);
-    -webkit-transform: translateX(-4px);
-    transform: translateX(-4px);
-    transition: all 1s;
-}
+    }
 
-.btn_general {
-    background: rgb(253, 109, 52);
-    border-radius: 3px;
-    display: block;
-    cursor: pointer;
-    padding: 8px 1px;
+.btn_replay {
     box-shadow: 1px 0 20px 4px rgb(54, 3, 3);
-    text-align: center;
-    width: 100%;
-    min-width: 150px;
-    font-size: 1.067em; /*16px;*/
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: rgb(58, 7, 7);
-    border: none;
 }
 
-.btn_general:hover {
+.btn_replay:hover {
     box-shadow:
     1px 1px rgb(94, 56, 35),
     2px 2px rgb(94, 56, 35),
@@ -141,33 +164,26 @@ nav {
     5px 5px rgb(73, 43, 27),
     6px 6px rgb(73, 43, 27),
     7px 7px rgb(73, 43, 27);
-    -webkit-transform: translateX(-4px);
-    transform: translateX(-4px);
-    transition: all 1s;
 }
-.form-group ::placeholder {
-    font-size: 0.7em;
-    color: rgb(189, 189, 189);
-}
+
+/*modal*/
 
 .btn_close {
     background: rgb(185, 180, 176);
-    font-size: 1.3em;
+    
 }
 .btn_go {
     background: rgb(253, 144, 43);
-    font-size: 1.3em;
+    
 }
+/*end modal*/
 
 .advantages {
     background: rgba(227, 182, 134, 0.11); 
-    color: rgb(255, 255, 255);
     margin-top: 15vh;
     font-size: 1.267em;/*19px*/
     padding: 6px 0; 
-    text-transform: uppercase;
     opacity: 0.7;
-    text-align: center;
 } 
 .advantage__icon {
     background: rgba(255, 255, 255, 0.6);
@@ -189,7 +205,7 @@ nav {
 
 .personal {
     font-size: 1.666em;
-    font-style: italic;
+ 
 }
 
 .personal:before {  
@@ -204,10 +220,6 @@ nav {
 
 .personal__title, .personal__work  {
     margin-left: 52px;
-}
-.personal__title h2 {
-    text-align: left;
-    font-size: 1em;
 }
 .personal__desc {
     margin: 20px 0 35px 52px;
@@ -226,20 +238,11 @@ nav {
 }
 
 .personal__btn {
+    font-size: 0.95em;
     box-shadow: 1px 0 20px 4px rgb(226, 190, 156);
-    width: 37%;
-    max-width: 190px;
-    text-align: center;
+    max-width: 210px;
 }
 
-.personal__btn a {
-    display: block;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    font-style: normal;
-    padding: 4px;
-    font-size: 0.8em; /*15px*/
-}
 .additional {
     display: none;
     font-size: 1.1em;
@@ -261,13 +264,10 @@ nav {
     height: 60px;
     width: 80px;
     margin: 5px;
-    text-align: center;
 }
 .degrees li {
     display: inline;
 }
-
-
 
 
 /*services*/
@@ -280,10 +280,6 @@ nav {
     font-size: 3em; /*45px;*/
     width: 5%;
     margin: 0 auto;
-}
-
-h4 {
-    font-size: 1.133em; /*17px;*/
 }
 
 .about_lfk .container {
@@ -317,7 +313,6 @@ h4 {
 .about_lfk__desc_text__impotant {
     color: rgb(255, 94, 73);
     text-align: right;
-    font-style: italic;
 }
 
 .about_lfk__desc_text {
@@ -328,9 +323,7 @@ h4 {
 .about_lfk__title h3 {
     padding: 5px;
     text-align: right;
-    font-style: italic;
 }
-
 
 .individual_offer {
     background: url("../img/persanal-services.jpeg") no-repeat center / cover;
@@ -345,13 +338,8 @@ h4 {
     box-shadow: 1px 0 5px 3px rgb(54, 3, 3);
 }
 
-.individual_offer__title {
-    font-style: italic;
-}
-
 .individual_offer__icon_circle {
     background: rgb(54, 3, 3);
-    display: block;
     height: 10px;
     width: 10px;
     -moz-border-radius: 5px; 
@@ -364,12 +352,10 @@ h4 {
 }
 
 .services_price__title {
-    text-align: center;
     margin: 50px 0;
 }
+
 .services_price__course {
-    text-align: center;
-    cursor: pointer;
     margin: 10px 0;
     -webkit-transition: margin 0.5s ease-out;
     -moz-transition: margin 0.5s ease-out;
@@ -398,7 +384,6 @@ h4 {
     width: 20%;
     margin: 20px auto;
     margin-bottom: 20px;
-    text-align: center;
     box-shadow: none;
 }
 
@@ -410,7 +395,7 @@ h4 {
     padding-left: 0;
 }
 
-.attention:before {  
+.attention :before {  
     content: "!";  
     font-size: 3.3em; /*75px;*/ 
     font-family: Georgia, 'Times New Roman', Times, serif; 
@@ -428,21 +413,16 @@ h4 {
     padding: 60px 40px;
 }
 .review_desc {
-    color: rgb(255, 255, 255);
     font-size: 1.467em; /*22px;*/
     width: 70%;
     margin: 0 auto;
-    text-align: center;
     padding: 20px;
-    font-style: italic;
 }
 
 .icon-quote {
     font-size: 5em; /*75px;*/ 
     font-family: Georgia, 'Times New Roman', Times, serif; 
     line-height: 0.7;
-    color: rgb(255, 255, 255);
-    font-style: italic;
 }
 .icon-quote-right {
     text-align: right;
@@ -477,8 +457,8 @@ h4 {
     display: block;
     color: rgb(54, 45, 45);
     font-family: 'Ubuntu', sans-serif;
-    cursor: pointer;
 }
+
 .icon_left {
     background: url("../img/review.png") no-repeat top left;
     float: left;
@@ -495,7 +475,6 @@ h4 {
 }
 .article__wrapper_title {
     font-size: 1.2em;/*20px;*/
-    font-style: italic;
     display: block;
     background: rgb(226, 181, 120);
     background: linear-gradient( to right, rgb(255, 96, 56), rgb(255, 154, 114), rgb(243, 224, 157));
@@ -508,7 +487,6 @@ h4 {
 .more_btn {
     text-align: right;
     font-size: 0.8em; /*12px;*/
-    font-style: italic;
     margin-top: 10px;
     color: rgb(141, 118, 100);
     text-shadow: 1px 1px 1px rgb(182, 180, 180)
@@ -519,19 +497,8 @@ h4 {
     width: 20%;
     margin: 0 auto;
     margin-top: 30px;
-    border-radius: 3px;
-    display: block;
-    cursor: pointer;
-    padding: 8px 1px;
-    text-align: center;
 }
-.read_more a {
-    font-size: 1.067em; /*16px;*/
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: rgb(255, 255, 255);
-}
+
 .read_more:hover {
     box-shadow:
     1px 1px rgb(94, 56, 35),
@@ -540,9 +507,7 @@ h4 {
     4px 4px rgb(61, 54, 23),
     5px 5px rgb(61, 54, 23),
     6px 6px rgb(61, 54, 23);
-    -webkit-transform: translateX(-4px);
-    transform: translateX(-4px);
-    transition: all 1s;
+    
 }
 
 
@@ -558,7 +523,6 @@ h4 {
     width: 19vh;
     background: url("../img/icon-ct.png") no-repeat center;
     margin: 15px auto;
-    cursor: pointer;
 }
 
 .contacts__about i:hover {
@@ -568,7 +532,6 @@ h4 {
     transform: scale(1.4);
 }
 .contacts__about i {
-    color: rgba(255, 255, 255);
     font-size: 1.467em; /*23px;*/
 }
 
@@ -576,11 +539,7 @@ h4 {
     margin: 0 auto;
 }
 .question {
-    text-align: center;
     margin-bottom: 20px;;
-}
-.question_desc {
-    font-style: italic;
 }
 
 form {
@@ -588,16 +547,16 @@ form {
     margin: 0 auto;
 }
 .form_enter ::placeholder {
-color: rgb(128, 99, 99);
+    color: rgb(128, 99, 99);
 }
 
 .btn_place button {
-    display: block;
+    width: 20%;
     margin: 0 auto;
-    color: rgb(255, 255, 255);
-    border: none;
     box-shadow: 1px 0 20px 4px rgb(226, 190, 156);
-    text-transform: uppercase;
+}
+.btn_place button:hover {
+    background: none;
 }
 
 
@@ -612,10 +571,6 @@ color: rgb(128, 99, 99);
     text-align: right;
 }
 
-.footer_contacts a {
-    color: rgb(255, 255, 255);
-    font-style: italic;
-}
 .footer_contacts__item {
     margin: 5px;
 }
@@ -629,9 +584,9 @@ color: rgb(128, 99, 99);
     width: 36px;
     height: 30px;
     position: relative;
-    cursor: pointer;
     z-index: 2;
 }
+
 .menu__icon span {
     display: block;
     position: absolute;
@@ -735,9 +690,11 @@ color: rgb(128, 99, 99);
         background-color: rgba(250, 82, 31);
         border: 0.5px solid rgb(255, 220, 174);
         border-radius: 3px;
-        margin: 2px 0;
+        margin: 0.5px 0;
     }
-    
+    .header_articles .menu__links {
+        margin-top: 70px;
+    }
     .hamb {
         flex-direction: column;
         justify-content: flex-end;
@@ -786,9 +743,11 @@ color: rgb(128, 99, 99);
         background-color: rgba(250, 82, 31);
         border: 0.5px solid rgb(255, 220, 174);
         border-radius: 3px;
-        margin: 2px 0;
+        margin: 0.5px 0;
     }
-
+    .header_articles .menu__links {
+        margin-top: 70px;
+    }
        
     .hamb {
         flex-direction: column;
@@ -944,7 +903,6 @@ color: rgb(128, 99, 99);
 
 .header_articles .main_header {
     background: url("../img/main-b.jpeg");
-    color: rgb(255, 255, 255);
     padding: 10px 0;
     
 }
@@ -974,7 +932,6 @@ color: rgb(128, 99, 99);
     font-size: 1.5em;
     padding: 5px 0;
     margin-top: 5px;
-    text-align: center;
 }
 .main_desc {
     padding: 8px;
@@ -985,7 +942,6 @@ color: rgb(128, 99, 99);
 main {
     margin: 10px 0;
     border-radius: 10px;
-    
     box-shadow: inset 2px 2px 1px rgba(250, 191, 136, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
 }
 .line {
