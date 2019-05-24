@@ -1,40 +1,53 @@
+$( document ).ready(function() {
   /*hamburger*/
-  (function($){
     $(function() {
-      $('.menu__icon').on('click', function() {
+      $('.menu__icon').click(function() {
         $(this).closest('.main_menu')
           .toggleClass('menu_state_open');
       });
-      
-      $('.nav-link').on('click', function() {
+      $('.nav-link').click(function() {
         $(this).closest('.main_menu')
           .removeClass('menu_state_open');
       });
     });
-  })(jQuery);
-  
+
+  /*about button*/
+    $(function() {
+      $('.personal__btn').click(function(){
+        if ($(".additional").css("display") == "none") {
+          $(".additional").show();
+          $(".personal__btn").html("закрыть");
+        }
+        else {
+          $(".additional").hide();
+          $(".personal__btn").html("подробнее обо мне");
+        }  
+      });
+    });
+
+ /*form */
+ $(function() {
+  $(".ajax-contact-form").submit(function() {
+    var data = $(this).serialize();
+    $.ajax({
+      url: "send.php",
+      type: "POST",
+      data: data,
+      success: function(res) {
+        if(res == 1) {
+          alert("Письмо отправлено");
+        } else {
+          alert("Ошибка отправки")
+        }
+      },
+      error: function(){
+        alert("Ошибка!")
+      } 
+    });
+  })
+  return false;
+  });
 
 
-/*about button*/
-window.onload = function () {
-  document.getElementById("toggler").onclick = function() {
-    openbox("box", this);
-    return false;
-  };
-};
-function openbox(id, toggler) {
-  let div = document.getElementById(id);
-  
-  if (div.style.display == "block") {
-    div.style.display = "none";
-    toggler.innerHTML = "подробнее обо мне";
-  }
-  else {
-    div.style.display = "block";
-    toggler.innerHTML = "Закрыть";
-  }
-}
-
-
-
+});
 
