@@ -6,7 +6,6 @@ body {
     font-size: 16px;
 }
 ul, li {
-    display: block;
     padding: 0;
     margin: 0;
 }
@@ -35,6 +34,11 @@ header {
 }
 
 /*button*/
+
+button:focus {
+    outline: none;
+}
+
 .btn_general {
     border-radius: 3px;
     display: block;
@@ -46,7 +50,10 @@ header {
     letter-spacing: 1px;
     border: none;
     background: none;
+    
 }
+
+
 .btn_general:hover {
     border: none;
     -webkit-transform: translateX(-4px);
@@ -66,7 +73,7 @@ header {
 .nav-link, .btn_general, .advantages {
     text-transform: uppercase;
 }
-.nav-link, .btn_general, .services_price__course, .article, .contacts__about, .menu__icon {
+.nav-link, .btn_general, .services_price__course, .article, .contacts__about, .menu__icon, .degree_1 {
     cursor: pointer;
 }
 
@@ -415,8 +422,10 @@ nav {
 .review_desc {
     font-size: 1.467em; /*22px;*/
     width: 70%;
+    height: 240px;
+    overflow: hidden;
     margin: 0 auto;
-    padding: 20px;
+    
 }
 
 .icon-quote {
@@ -440,7 +449,9 @@ nav {
     margin-top: 20px;
 }
 
-
+.carousel {
+    width: 100%;
+}
 /*read*/
 
 .read {
@@ -458,6 +469,9 @@ nav {
     color: rgb(54, 45, 45);
     font-family: 'Ubuntu', sans-serif;
 }
+.link :hover{
+    color: rgb(58, 7, 7);
+}
 
 .icon_left {
     background: url("../img/review.png") no-repeat top left;
@@ -470,7 +484,7 @@ nav {
     background: rgb(255, 255, 255);
     padding: 10px;
     margin: 15px 30px 0 15px;
-    height: 20vh;
+    height: 22vh;
     border: rgb(129, 98, 86) 1px dotted;
 }
 .article__wrapper_title {
@@ -534,6 +548,9 @@ nav {
 .contacts__about i {
     font-size: 1.467em; /*23px;*/
 }
+.contacts__about-adress {
+float: right;
+}
 
 .wrapper {  
     margin: 0 auto;
@@ -558,7 +575,13 @@ form {
 .btn_place button:hover {
     background: none;
 }
-
+.input-phone {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    border:none;
+}
 
 /*footer*/
 
@@ -914,6 +937,10 @@ form {
     border: 2px dotted rgb(243, 90, 44);
     border-radius: 10px;
     background: rgb(255, 255, 255);
+    
+}
+.menu_articles ul {
+    list-style-type: none;
 }
 
 .menu_articles .article__wrapper_title a {
@@ -932,13 +959,38 @@ form {
     font-size: 1.5em;
     padding: 5px 0;
     margin-top: 5px;
+    
 }
 .main_desc {
     padding: 8px;
     border-radius: 10px;
     text-align: justify;
 }
+.main_desc li {
+    margin-left: 15px;
+}
+.main_desc span {
+    font-weight: 600;
+    font-style: italic;
+}
+.main_desc ol li {
+    font-style: italic;
+}
+.main_desc li p {
+    font-style: normal;
+}
+.main_desc-auth {
+    font-size: 8px;
+}
 
+.main_desc-header {
+    font-style: italic;
+    font-weight: 600;
+}
+.main_desc-list {
+    
+    list-style-type: disc;
+}
 main {
     margin: 10px 0;
     border-radius: 10px;
@@ -949,7 +1001,15 @@ main {
     margin: 0 50px;
     background: rgba(247, 24, 24, 0.5);
 }
-
+.table th {
+    text-align: center;
+    vertical-align: center;
+    font-size: 12px;
+}
+table.table-article td {
+    font-size: 11px;
+    vertical-align: center;
+}
 
 @media screen and (min-width: 440px) and (max-width: 576px) {
     .sidebar {

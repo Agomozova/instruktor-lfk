@@ -25,29 +25,37 @@ $( document ).ready(function() {
       });
     });
 
- /*form */
- $(function() {
-  $(".ajax-contact-form").submit(function() {
-    var data = $(this).serialize();
-    $.ajax({
-      url: "send.php",
-      type: "POST",
-      data: data,
-      success: function(res) {
-        if(res == 1) {
-          alert("Письмо отправлено");
-        } else {
-          alert("Ошибка отправки")
-        }
-      },
-      error: function(){
-        alert("Ошибка!")
-      } 
+  /*tooltips*/
+  $(function(){
+    $('[data-toggle="tooltip"]').tooltip();    
+  });
+  
+
+/*form*/
+
+  $(function() {
+    $("form").submit(function(e) {
+      var formID = $(this).attr('id');
+      var formNm = $('#' + formID);
+      $.ajax({
+        url: 'send.php',
+        type: 'POST',
+        data: formNm.serialize(),
+        success: function(res) {
+          if(res == 1) {
+            formNm.find("input:not(#submit), textarea").val("");
+            alert("Письмо отправлено");
+          } else {
+            alert("Ошибка отправки! Отправьте сообщение через whatsapp!");
+          }
+        },
+        error: function(){
+          alert("Ошибка!")
+        } 
+      });
+      e.preventDefault();
     });
-  })
-  return false;
   });
 
-
-});
+})
 
